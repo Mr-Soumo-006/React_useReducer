@@ -13,6 +13,7 @@ function UseWindowWidth()
             setWidth(window.innerWidth)
         }
         window.addEventListener('resize',handleResize)
+        //removing the event after printing the width
         return ()=>window.removeEventListener('resize',handleResize)
     },[])
     return width
